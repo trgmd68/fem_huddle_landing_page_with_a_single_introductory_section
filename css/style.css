@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
+/* VARIABLES */
+
+:root {
+  /* COLORS */
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+
+  /* TYPOGRAPHY */
+  font-size: 16px;
+  --ff--primary: "Open Sans", sans-serif;
+  --ff--heading: "Poppins", sans-serif;
+  --fw--regular: 400;
+  --fw--semibold: 600;
+}
+
+h1 {
+  font-family: var(--ff--heading);
+  font-weight: var(--fw--semibold);
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin: 0 0.75rem 1.5rem 0.75rem;
+}
+
+span {
+  display: block;
+}
+
+p {
+  font-family: var(--ff--primary);
+  font-weight: var(--fw--regular);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--violet);
+  background-image: url(../images/bg-mobile.svg);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: var(--ff--primary);
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 100%;
+  /* max-width: 300px; */
+  height: 100%;
+  padding-inline: 1rem;
+  margin: 0 auto;
+  display: grid;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+header {
+  margin-block: 2.25rem 2rem;
+}
+
+header img {
+  width: 135px;
+  height: auto;
+}
+
+.flex {
+}
+
+.hero {
+  margin-bottom: 4rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+button {
+  font-family: var(--ff--heading);
+  font-weight: var(--fw--regular);
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  background-color: white;
+  color: var(--violet);
+  padding: 0.5rem 5rem;
+  border: none;
+  border-radius: 40px;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  background-color: var(--softMagenta);
+  color: white;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-block: 2rem 2.5rem;
+}
+
+a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid white;
+  color: white;
+  margin: 0 0.5rem;
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--softMagenta);
+  border-color: var(--softMagenta);
+}
+
+i {
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 1110px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+  }
+
+  header {
+    margin-block: 3rem 5.25rem;
+  }
+
+  header img {
+    width: 212px;
+  }
+
+  .flex {
+    display: flex;
+    gap: 1rem;
+  }
+
+  h1 {
+    margin-left: 0;
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  .hero {
+    width: 60%;
+    max-width: 700px;
+    margin-bottom: 1rem;
+  }
+
+  .wrapper {
+    width: 45%;
+    text-align: left;
+    padding: 3rem 1.5rem;
+  }
+
+  button {
+    padding: 1rem 4rem;
+    font-size: 1.125rem;
+  }
+
+  footer {
+    justify-content: flex-end;
+    margin: 0 4rem 2rem 05;
+  }
+
+  a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+}
